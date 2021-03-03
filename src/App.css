@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+    min-width: 400px;
+    max-width: 500px;
+    margin-left: 10px;
+    margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .App {
+        max-width: 800px;
+        margin-left: 20px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (min-width: 900px) {
+    .App {
+        max-width: 1000px;
+        margin-left: 40px;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.input-bar {
+    margin-bottom: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+ul.spelling {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spelling__letter {
+    margin-bottom: 0.4em;
+}
+
+.letter__initial {
+    display: inline-block;
+    height: 8em;
+    width: 8em;
+    border: 1px solid black;
+    position: relative;
+    vertical-align: bottom;
+}
+.letter__initial-text {
+    position: absolute;
+    bottom: 0;
+    left: 0.1em;
+    font-size: x-large;
+    color: red;
+}
+
+.letter__line {
+    margin-left: 0.5em;
+    vertical-align: bottom;
+}
+
+.letter__line-word {
+    font-weight: bold;
 }
