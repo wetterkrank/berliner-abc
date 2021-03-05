@@ -1,29 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route, useRouteMatch } from "react-router-dom";
 
 import './App.css';
 import InputBar from './components/input_bar';
+import Footer from './components/footer';
 import Spelling from './components/spelling';
 
-type AppState = {
-  name: string | null
-}
+function App() {
+  const navigate = (query: string) => { window.location.pathname = '/' + query; }
+  
+  const match = useRouteMatch("/:name");
+  const name = match ? match.url.slice(1) : '';
 
-class App extends Component<{}, AppState> {
-  state: AppState = {name: null}
-
-  updateName = (input: string): void => {
-    this.setState({ name: input});
-  }
-
-  render() {
-    return (
+  return (
       <div className="App">
-        <h1>Spell your name the Berlin way!</h1>
-        <InputBar submitFn={this.updateName} />
-        <Spelling name={this.state.name} />
+        <div className="header">
+          {/* Berliner ABC */}
+        </div>
+
+        <div className="main">
+          <div className="container">
+            <h1>Spell your name the Berlin way!</h1>
+            <InputBar submitFn={navigate} initValue={name} />
+            <Route path="/:name" component={Spelling} />
+          </div>
+        </div>
+
+        <div className="sticky-footer">
+          <Footer>
+            Berlin Alphabet pics by Natalia Smolentceva
+          </Footer>
+        </div>
+
       </div>
-    )
-  }
+  )
 }
 
 export default App;

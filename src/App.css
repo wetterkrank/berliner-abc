@@ -1,22 +1,41 @@
-.App {
-    min-width: 400px;
+.container {
+    min-width: 300px;
     max-width: 500px;
     margin-left: 10px;
-    margin-top: 50px;
+    margin-right: 10px;
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
-    .App {
-        max-width: 800px;
-        margin-left: 20px;
-    }
-}
+.container {
+    max-width: 800px;
+    margin-left: 20px;
+    margin-right: 20px;
+}}
 
 @media screen and (min-width: 900px) {
-    .App {
-        max-width: 1000px;
-        margin-left: 40px;
-    }
+.container {
+    max-width: 1000px;
+    margin-left: 40px;
+    margin-right: 40px;
+}}
+
+h1 { font-size: 160%; }
+
+.App {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex: 1 0 auto;
+}
+
+.sticky-footer {
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 div.input-bar {
@@ -29,29 +48,36 @@ ul.spelling {
     list-style: none;
 }
 
-.spelling__letter {
+.letter {
+    display: flex;
     margin-bottom: 0.4em;
 }
 
 .letter__initial {
-    display: inline-block;
-    height: 8em;
-    width: 8em;
+    width: 180px;
+    height: 180px;
     border: 1px solid black;
-    position: relative;
     vertical-align: bottom;
 }
-.letter__initial-text {
+
+.letter__initial img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* .letter__initial-text {
     position: absolute;
     bottom: 0;
-    left: 0.1em;
+    left: 0.2em;
     font-size: x-large;
     color: red;
-}
+} */
 
 .letter__line {
     margin-left: 0.5em;
-    vertical-align: bottom;
+    display: flex;
+    align-items: flex-end;
 }
 
 .letter__line-word {

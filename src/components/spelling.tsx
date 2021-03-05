@@ -1,22 +1,21 @@
-import { Component } from "react";
+import { useParams } from "react-router-dom";
+
 import Letter from './letter';
 
-type SpellingProps = {
-  name: string | null
+type SpellingParams = {
+  name: string
 }
 
-class Spelling extends Component<SpellingProps, {}> {
-  render() {
-    const { name } = this.props;
-    if (name === null) return null;
+function Spelling() {
+  let { name } = useParams<SpellingParams>();
+  if (!name) return null;
 
-    const letters: [string, number][] = name.split('').map((letter, i) => [letter.toUpperCase(), i]);
-    return (
-      <ul className="spelling">
-        {letters.map(lttr => <Letter contents={lttr[0]} key={lttr[1]} />)}
-      </ul>
-    )
-  }
+  const letters: [string, number][] = name.split('').map((letter, i) => [letter.toUpperCase(), i]);
+  return (
+    <ul className="spelling">
+      {letters.map(lttr => <Letter contents={lttr[0]} key={lttr[1]} />)}
+    </ul>
+  )
 }
 
 export default Spelling;

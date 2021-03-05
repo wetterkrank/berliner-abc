@@ -8,7 +8,7 @@ const abc: abcType = {
   'C': 'Currywurst',
   'D': ['Döner', 'Demo', 'DJ'],
   'E': 'East Side Gallery',
-  'F': ['Fernsehturm', 'FKK', 'Freiluftkino', 'Flomarkt'],
+  'F': ['Fernsehturm', 'FKK', 'Freiluftkino', 'Flohmarkt'],
   'G': ['Görlitzer Park', 'Grunewald'],
   'H': 'Hauptbahnhof',
   'I': ['Immobilienscout'],

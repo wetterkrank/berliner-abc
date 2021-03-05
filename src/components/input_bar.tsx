@@ -2,6 +2,7 @@ import { Component } from "react";
 import styled from 'styled-components';
 
 type InputProps = {
+  initValue: string,
   submitFn: (input: string) => void,
 }
 
@@ -12,14 +13,14 @@ type InputState = {
 class InputBar extends Component<InputProps, InputState> {
   constructor(props: InputProps) {
     super(props);
-    this.state = {value: ''};
+    this.state = { value: props.initValue };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // NOTE the event type
   handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event: React.FormEvent) {
@@ -29,6 +30,7 @@ class InputBar extends Component<InputProps, InputState> {
 
   TextInput = styled.input`
     padding: 0.5em 0.6em;
+    margin-bottom: 0.3em;
     display: inline-block;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
@@ -39,13 +41,14 @@ class InputBar extends Component<InputProps, InputState> {
       outline: 0;
       border-color: #129FEA;
     }
-  `;
+    `;
 
   SubmitButton = styled.input`
     background-color: rgb(0, 120, 231);
     color: #fff;
-
+    
     display: inline-block;
+    margin-bottom: 0.3em;
     line-height: normal;
     white-space: nowrap;
     vertical-align: middle;

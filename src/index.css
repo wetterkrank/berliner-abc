@@ -1,5 +1,9 @@
 @import "normalize.css/normalize";
 
+html, body, #root {
+  height: 100%;
+}
+
 html {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -15,11 +19,7 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  display: flex;
+  flex-direction: column;
 }
