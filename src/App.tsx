@@ -3,8 +3,12 @@ import { Route, useRouteMatch } from "react-router-dom";
 
 import './App.css';
 import InputBar from './components/input_bar';
-import Footer from './components/footer';
+import Footer, { FooterLink } from './components/footer';
 import Spelling from './components/spelling';
+
+import { ReactComponent as GHicon } from './icons/github.svg';
+import { ReactComponent as IGicon } from './icons/instagram.svg';
+import { ReactComponent as LIicon } from './icons/linkedin.svg';
 
 function App() {
   const navigate = (query: string) => { window.location.pathname = '/' + query; }
@@ -28,7 +32,8 @@ function App() {
 
         <div className="sticky-footer">
           <Footer>
-            Berlin Alphabet pics by Natalia Smolentceva
+            <FooterLink><GHicon /> <LIicon /></FooterLink><br />
+            <FooterLink>Berlin Alphabet pics by <a href="https://www.instagram.com/natasketch/"><IGicon /> natasketch</a></FooterLink><br />
           </Footer>
         </div>
 

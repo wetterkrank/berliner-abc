@@ -39,7 +39,7 @@ h1 { font-size: 160%; }
 }
 
 div.input-bar {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 ul.spelling {
@@ -54,15 +54,15 @@ ul.spelling {
 }
 
 .letter__initial {
-    width: 180px;
-    height: 180px;
+    /* width: 180px; */
+    /* height: 180px; */
     border: 1px solid black;
     vertical-align: bottom;
 }
 
 .letter__initial img {
-    max-width: 100%;
-    height: auto;
+    width: 180px;
+    height: 180px;
     display: block;
 }
 

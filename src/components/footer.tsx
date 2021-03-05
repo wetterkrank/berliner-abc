@@ -10,16 +10,22 @@ const Wrapper = styled.div`
   @media (min-width: 900px) {
     padding: 20px 40px;
   }
-
 `;
 
-export const Link = styled.a`
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  &:hover {
-      color: #ff9c00;
-      transition: 200ms ease-in;
+export const FooterLink = styled.span`
+color: #555555;
+svg {
+  width: 1.6em;
+  height: 1.6em;
+  vertical-align: bottom;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+    &:hover {
+        color: #ff9c00;
+        transition: 200ms ease-in-out;
+    }
   }
 `;
 
