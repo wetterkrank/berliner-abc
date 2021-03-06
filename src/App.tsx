@@ -19,12 +19,14 @@ function App() {
   return (
       <div className="App">
         <div className="header">
-          {/* Berliner ABC */}
+          <h1>Spell anything the Berlin way!</h1>
         </div>
 
         <div className="main">
           <div className="container">
-            <h1>Spell your name the Berlin way!</h1>
+            <h3 className="label">
+              What's your name?
+            </h3>
             <InputBar submitFn={navigate} initValue={name} />
             <Route path="/:name" component={Spelling} />
           </div>
@@ -32,8 +34,9 @@ function App() {
 
         <div className="sticky-footer">
           <Footer>
-            <FooterLink><GHicon /> <LIicon /></FooterLink><br />
-            <FooterLink>Berlin Alphabet pics by <a href="https://www.instagram.com/natasketch/"><IGicon /> natasketch</a></FooterLink><br />
+            <FooterLink><GHicon /> <LIicon /></FooterLink>
+            <br/>
+            <FooterLink>Berlin Alphabet pics by <a href="https://www.instagram.com/natasketch/"><IGicon /> natasketch</a></FooterLink>
           </Footer>
         </div>
 

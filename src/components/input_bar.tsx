@@ -82,10 +82,11 @@ class InputBar extends Component<InputProps, InputState> {
   `;
 
   render() {
+    const focused = this.props.initValue ? false : true;
     return (
       <div className="input-bar">
         <form onSubmit={this.handleSubmit}>
-          <this.TextInput type="text" value={this.state.value} onChange={this.handleChange} required={true} autoFocus={true} />
+          <this.TextInput type="text" value={this.state.value} onChange={this.handleChange} required={true} autoFocus={focused} />
           <span> </span>
           <this.SubmitButton type="submit" value="Let's go" />
         </form>
