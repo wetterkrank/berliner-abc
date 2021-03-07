@@ -19,24 +19,29 @@ function App() {
   return (
       <div className="App">
         <div className="header">
-          <h1>Spell anything the Berlin way!</h1>
+          <h1>Spell your name the Berlin way!</h1>
         </div>
 
         <div className="main">
-          <div className="container">
-            <h3 className="label">
-              What's your name?
-            </h3>
-            <InputBar submitFn={navigate} initValue={name} />
-            <Route path="/:name" component={Spelling} />
-          </div>
+          <h3 className="label">
+            What's your name?
+          </h3>
+          <InputBar submitFn={navigate} initValue={name} />
+          <Route path="/:name" component={Spelling} />
         </div>
 
         <div className="sticky-footer">
           <Footer>
-            <FooterLink><GHicon /> <LIicon /></FooterLink>
-            <br/>
-            <FooterLink>Berlin Alphabet pics by <a href="https://www.instagram.com/natasketch/"><IGicon /> natasketch</a></FooterLink>
+            <div className="footer-flex">
+              <div className="footer-left">
+                <FooterLink>
+                  Berlin Alphabet pics by &nbsp;<a href="https://www.instagram.com/natasketch/"><span style={{display: 'inline-block'}}><IGicon /> natasketch</span></a>
+                </FooterLink>
+              </div>
+              <div className="footer-right">
+                <FooterLink><GHicon /> <LIicon /></FooterLink>
+              </div>
+            </div>
           </Footer>
         </div>
 

@@ -21,6 +21,4 @@ html {
 
 body {
   font-family: 'Oxygen', sans-serif;
-  display: flex;
-  flex-direction: column;
 }

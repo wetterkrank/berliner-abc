@@ -1,26 +1,12 @@
-.container {
+.main {
     min-width: 300px;
-    max-width: 500px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* max-width: 500px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex: 1 0 auto;
 }
-
-@media screen and (min-width: 600px) and (max-width: 900px) {
-.container {
-    max-width: 800px;
-    margin-left: 20px;
-    margin-right: 20px;
-}}
-
-@media screen and (min-width: 900px) {
-.container {
-    max-width: 1000px;
-    margin-left: 40px;
-    margin-right: 40px;
-}}
-
-h1 { font-size: 160%; }
-h3 { font-weight: 300; }
 
 .App {
     height: 100%;
@@ -29,20 +15,25 @@ h3 { font-weight: 300; }
 }
 
 .header {
-    padding: 10px 40px;
+    min-width: 300px;
+    padding: 10px 10px;
     color: #181818;
-    background-color: #F7B801;  
-}
-
-.main {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    flex: 1 0 auto;
+    background-color: #F7B801;
 }
 
 .sticky-footer {
+    min-width: 300px;
     margin-top: auto;
     flex-shrink: 0;
+}
+
+.footer-left {
+    max-width: 75%;
+    display: inline-block;
+}
+
+.footer-right {
+    float: right;
 }
 
 div.input-bar {
@@ -61,8 +52,6 @@ ul.spelling {
 }
 
 .letter__initial {
-    /* width: 180px; */
-    /* height: 180px; */
     border: 1px solid black;
     vertical-align: bottom;
 }
@@ -89,4 +78,32 @@ ul.spelling {
 
 .letter__line-word {
     font-weight: bold;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .main {
+        max-width: 800px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .main {
+        max-width: 1000px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }

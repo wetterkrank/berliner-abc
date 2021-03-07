@@ -31,7 +31,6 @@ class InputBar extends Component<InputProps, InputState> {
   TextInput = styled.input`
     padding: 0.5em 0.6em;
     margin-bottom: 0.3em;
-    display: inline-block;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
@@ -47,7 +46,6 @@ class InputBar extends Component<InputProps, InputState> {
     background-color: rgb(0, 120, 231);
     color: #fff;
     
-    display: inline-block;
     margin-bottom: 0.3em;
     line-height: normal;
     white-space: nowrap;
